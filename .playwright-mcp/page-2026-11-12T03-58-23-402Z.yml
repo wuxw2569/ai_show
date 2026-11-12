@@ -1,0 +1,87 @@
+- generic [active] [ref=f2e1]:
+  - generic [ref=f2e5]:
+    - heading "鹈鹕骑单车" [level=1] [ref=f2e25]
+    - paragraph [ref=f2e26]: 一只戴头盔、围红围巾的白鹈鹕，骑着复古单车沿海岸线追鱼。黄昏、星空、海浪与路灯 —— 全部实时生成，无一张外部贴图。
+    - generic [ref=f2e27]:
+      - generic [ref=f2e28]: 程序化建模
+      - generic [ref=f2e29]: 双骨骼 IK 踩踏
+      - generic [ref=f2e30]: Verlet 布料围巾
+      - generic [ref=f2e31]: Gerstner 海浪
+      - generic [ref=f2e32]: 昼夜循环
+      - generic [ref=f2e33]: 合成音效 + 生成式音乐
+      - generic [ref=f2e34]: 抓鱼小游戏
+    - generic [ref=f2e35]:
+      - button "开始骑行 ▶" [ref=f2e36] [cursor=pointer]
+      - button "静音进入" [ref=f2e37] [cursor=pointer]
+    - generic [ref=f2e38]:
+      - generic [ref=f2e39]: W
+      - generic [ref=f2e40]: S
+      - text: 加速 / 刹车
+      - generic [ref=f2e41]: A
+      - generic [ref=f2e42]: D
+      - text: 变道抓鱼
+      - generic [ref=f2e43]: 空格
+      - text: 跳跃
+      - generic [ref=f2e44]: T
+      - text: 放手特技
+      - generic [ref=f2e45]: B
+      - text: 按铃
+      - generic [ref=f2e46]: H
+      - text: 鹈鹕大叫
+      - generic [ref=f2e47]: C
+      - text: 切换镜头
+      - generic [ref=f2e48]: "N"
+      - text: 快进 3 小时 点击鹈鹕 / 车铃 / 海面都有惊喜
+    - generic [ref=f2e49]:
+      - link "GitHub 开源仓库" [ref=f2e50] [cursor=pointer]:
+        - /url: https://github.com/riba2534/claude-opus-5-5-demo
+      - link "关注作者 X" [ref=f2e53] [cursor=pointer]:
+        - /url: https://x.com/riba2534
+  - generic:
+    - generic [ref=f2e56]:
+      - generic [ref=f2e57]: 🐦
+      - generic [ref=f2e58]:
+        - text: 鹈鹕骑单车
+        - generic [ref=f2e59]: Pelican on a Bike · 实时 3D
+    - generic [ref=f2e60]:
+      - button "自由环绕" [ref=f2e61] [cursor=pointer]
+      - button "追随" [ref=f2e62] [cursor=pointer]
+      - button "侧面跟拍" [ref=f2e63] [cursor=pointer]
+      - button "电影运镜" [ref=f2e64] [cursor=pointer]
+      - button "鹈鹕视角" [ref=f2e65] [cursor=pointer]
+    - generic [ref=f2e66]:
+      - button "📸" [ref=f2e67] [cursor=pointer]
+      - button "🎵" [ref=f2e68] [cursor=pointer]
+      - button "🔗" [ref=f2e69] [cursor=pointer]
+      - button "⛶" [ref=f2e70] [cursor=pointer]
+      - button "⚙️" [ref=f2e71] [cursor=pointer]
+      - button "？" [ref=f2e72] [cursor=pointer]
+      - link "GitHub 源码" [ref=f2e73] [cursor=pointer]:
+        - /url: https://github.com/riba2534/claude-opus-5-5-demo
+      - link "X @riba2534" [ref=f2e76] [cursor=pointer]:
+        - /url: https://x.com/riba2534
+    - generic [ref=f2e79]:
+      - generic [ref=f2e85]:
+        - text: "27"
+        - generic [ref=f2e86]: KM/H
+      - generic [ref=f2e87]:
+        - generic [ref=f2e88]: 踏频
+        - generic [ref=f2e89]: 98 rpm
+        - generic [ref=f2e90]: 档位
+        - generic [ref=f2e91]: 3/5
+        - generic [ref=f2e92]: 里程
+        - generic [ref=f2e93]: 0.09 km
+        - generic [ref=f2e94]: 镜头
+        - generic [ref=f2e95]: 电影运镜
+    - generic [ref=f2e96]:
+      - generic [ref=f2e97]:
+        - generic [ref=f2e98]:
+          - generic [ref=f2e99]: 🐟
+          - generic [ref=f2e100]: "1"
+        - generic [ref=f2e101]: 成就0/14
+      - generic [ref=f2e102]:
+        - generic [ref=f2e103]: ☀️
+        - slider "时刻" [ref=f2e104] [cursor=pointer]: "17.35"
+        - generic [ref=f2e105]: 17:21
+        - button "⏯" [ref=f2e106] [cursor=pointer]
+  - text: ▾ ▾ ✓ ✓ ▸ ✓ ▸ ↕ ✓ ▸ ✓ ↕ ✓ ✓ ▸ ✓

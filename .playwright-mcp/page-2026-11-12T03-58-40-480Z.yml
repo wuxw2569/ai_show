@@ -1,0 +1,14 @@
+- generic [ref=f3e1]:
+  - paragraph [ref=f3e2]:
+    - text: 推荐使用Chrome浏览器游玩非官方粉丝作品 · 简化玩法，不连接英雄联盟服务器 © Riot Games ·
+    - link "Data Dragon 素材来源" [ref=f3e3] [cursor=pointer]:
+      - /url: https://developer.riotgames.com/docs/lol
+  - form "填写昵称并选择服务器" [ref=f3e4]:
+    - generic [ref=f3e5]: 海克斯大乱斗
+    - heading "先取一个昵称" [level=1] [ref=f3e6]
+    - generic [ref=f3e7]: 召唤师昵称
+    - textbox "召唤师昵称" [active] [ref=f3e8]:
+      - /placeholder: 请输入昵称
+      - text: 召唤师1063
+    - button "下一步" [ref=f3e9]
+    - status [ref=f3e10]

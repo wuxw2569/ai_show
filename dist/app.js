@@ -1,12 +1,14 @@
 const works = [
-  { id: 'endless-portals', title: '无尽之门', line: '如果一场梦，没有最后一个房间。', mood: '梦境', author: '未见实验室', visual: 'visual-portals', status: '概念演示' },
-  { id: 'choir-of-stars', title: '群星合唱团', line: '那些微弱的光，正在练习同一种语言。', mood: '壮观', author: '未见实验室', visual: 'visual-choir', status: '概念演示' },
-  { id: 'last-moth', title: '最后一只蛾', line: '它扑向一颗已经熄灭的太阳。', mood: '诡异', author: '未见实验室', visual: 'visual-moth', status: '概念演示' },
-  { id: 'silent-ocean', title: '静音海', line: '一片没有声音，却记得所有暴雨的海。', mood: '治愈', author: '未见实验室', visual: 'visual-ocean', status: '概念演示' },
-  { id: 'impossible-bloom', title: '不存在的花期', line: '春天犯了一个漂亮的错误。', mood: '梦境', author: '未见实验室', visual: 'visual-bloom', status: '概念演示' },
-  { id: 'night-train', title: '驶出夜晚', line: '列车经过之后，黄昏被留在了原地。', mood: '壮观', author: '未见实验室', visual: 'visual-train', status: '概念演示' },
-  { id: 'green-monolith', title: '绿光纪念碑', line: '它在等一个从未出生的文明。', mood: '诡异', author: '未见实验室', visual: 'visual-monolith', status: '概念演示' },
-  { id: 'after-rain', title: '雨后的宇宙花园', line: '每一滴水，都长出了自己的星座。', mood: '治愈', author: '未见实验室', visual: 'visual-garden', status: '概念演示' }
+  { id: 'east-scroll', title: '画中人', line: '月夜，她从悬挂的画卷里探身而出。', mood: '东方', author: 'Larus Canus', image: './images/east-scroll.jpg', source: 'https://x.com/MrLarus/status/2058056539923968099' },
+  { id: 'potala-blueprint', title: '布达拉宫·营造蓝图', line: '一座宫，连同它的每一根梁，从图纸上醒来。', mood: '壮观', author: 'Larus Canus', image: './images/potala-blueprint.jpg', source: 'https://x.com/MrLarus/status/2054493076618404090' },
+  { id: 'zhugeliang-statue', title: '卧龙·生平立像', line: '一个人的一生，被压进一座可以阅读的碑。', mood: '壮观', author: 'Larus Canus', image: './images/zhugeliang-statue.jpg', source: 'https://x.com/MrLarus/status/2053121448500179018' },
+  { id: 'felt-riverside', title: '毛毡上河图', line: '汴京被捏进了羊毛里，连市声都是软的。', mood: '壮观', author: '九尾狐-FoxFairy', image: './images/felt-riverside.jpg', source: 'https://x.com/Stellakjbk/status/2057805291824230543' },
+  { id: 'china-map', title: '锦绣山河', line: '一省一景，把中国摊开成一张手绘的桌布。', mood: '壮观', author: 'Ryo', image: './images/china-map.jpg', source: 'https://x.com/siantgirl/status/2055163703763554665' },
+  { id: 'huadian-makeup', title: '花钿点额', line: '花钿点在额上，朝代落在脸上。', mood: '东方', author: '李岳', image: './images/huadian-makeup.jpg', source: 'https://x.com/liyue_ai/status/2073027044451975627' },
+  { id: 'mangzhong', title: '芒种·张家界', line: '云雾峰林之间，稻田刚刚醒来。', mood: '东方', author: '小小东', image: './images/mangzhong.jpg', source: 'https://x.com/xiaoxiaodong/status/2057847431552004243' },
+  { id: 'lotus-leaf', title: '接天莲叶无穷碧', line: '八百年前的诗，长出了排版的骨骼。', mood: '设计', author: '小小东', image: './images/lotus-leaf.jpg', source: 'https://x.com/xiaoxiaodong/status/2058018197698416862' },
+  { id: 'yarra-duo', title: '雅拉河·对照', line: '同一条河，黄昏与水彩各执一词。', mood: '治愈', author: 'Kimberly', image: './images/yarra-duo.jpg', source: 'https://x.com/king1818888/status/2094443914866597977' },
+  { id: 'skeu-icons', title: '陶瓷与皮革', line: '图标不再是像素，是可以拿在手里的小物件。', mood: '治愈', author: '十里（玉伯荐）', image: './images/skeu-icons.jpg', source: 'https://x.com/lifesinger/status/2088226049071124487' }
 ]
 
 const STORAGE_KEY = 'weijian-saved-v1'
@@ -19,6 +21,9 @@ let activeWork = null
 let saved = new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'))
 
 function visualMarkup(work, extra = '') {
+  if (work.image) {
+    return `<div class="visual ${extra}"><img class="visual-image" src="${work.image}" alt="作品《${work.title}》" loading="lazy" decoding="async" /></div>`
+  }
   const portalBits = work.visual === 'visual-portals'
     ? '<span class="portal portal-a"></span><span class="portal portal-b"></span><span class="portal portal-c"></span><span class="wanderer"></span>'
     : ''
@@ -58,7 +63,7 @@ function openWork(id) {
   document.querySelector('#dialogTitle').textContent = work.title
   document.querySelector('#dialogLine').textContent = work.line
   document.querySelector('#dialogAuthor').textContent = work.author
-  document.querySelector('#dialogStatus').textContent = work.status
+  document.querySelector('#dialogSource').href = work.source || '#'
   document.querySelector('#dialogSave').textContent = saved.has(work.id) ? '已收藏 · 移除' : '收藏此作'
   dialog.showModal()
 }

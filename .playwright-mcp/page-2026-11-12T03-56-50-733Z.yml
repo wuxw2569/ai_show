@@ -1,0 +1,101 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - link "GitHub 源码" [ref=e4] [cursor=pointer]:
+      - /url: https://github.com/riba2534/claude-opus-5-5-demo
+    - link "X @riba2534" [ref=e7] [cursor=pointer]:
+      - /url: https://x.com/riba2534
+  - generic [ref=e10]:
+    - generic [ref=e11]: 飞车 3D
+    - generic [ref=e12]: QQ飞车 同人还原 · 漂移 · 集气 · 小喷 · 双喷 · 氮气
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - heading "选择赛道" [level=3] [ref=e15]
+        - generic [ref=e16]:
+          - generic [ref=e17] [cursor=pointer]:
+            - generic [ref=e18]: 11城
+            - generic [ref=e19]: CITY 11
+            - generic [ref=e20]: 经典竞速 · 11 个弯道
+          - generic [ref=e21] [cursor=pointer]:
+            - generic [ref=e22]: 情迷爱琴海
+            - generic [ref=e23]: AEGEAN SEA
+            - generic [ref=e24]: 山城爬坡 · 连续发卡弯
+          - generic [ref=e25] [cursor=pointer]:
+            - generic [ref=e26]: 法老金字塔
+            - generic [ref=e27]: PHARAOH
+            - generic [ref=e28]: 沙漠飞跃 · 神殿隧道
+          - generic [ref=e29] [cursor=pointer]:
+            - generic [ref=e30]: 雪地大冒险
+            - generic [ref=e31]: SNOW ADVENTURE
+            - generic [ref=e32]: 8 字立交 · 冰雪隧道
+        - heading "比赛模式" [level=3] [ref=e33]
+        - generic [ref=e34]:
+          - generic [ref=e35] [cursor=pointer]:
+            - text: 竞速模式
+            - generic [ref=e36]: 漂移集气、小喷、双喷，纯靠车技
+          - generic [ref=e37] [cursor=pointer]:
+            - text: 道具模式
+            - generic [ref=e38]: 导弹、香蕉皮、天使、磁铁、氮气
+      - generic [ref=e39]:
+        - heading "选择赛车" [level=3] [ref=e40]
+        - generic [ref=e41]:
+          - generic "烈焰战神" [ref=e42] [cursor=pointer]
+          - generic "冰蓝幻影" [ref=e43] [cursor=pointer]
+          - generic "紫电魅影" [ref=e44] [cursor=pointer]
+          - generic "黄金闪电" [ref=e45] [cursor=pointer]
+          - generic "白鲸号" [ref=e46] [cursor=pointer]
+          - generic "粉红甜心" [ref=e47] [cursor=pointer]
+          - generic "翡翠之星" [ref=e48] [cursor=pointer]
+          - generic "暗夜猎手" [ref=e49] [cursor=pointer]
+        - generic [ref=e50]: 烈焰战神
+        - heading "圈数" [level=3] [ref=e51]
+        - generic [ref=e52]:
+          - generic [ref=e53] [cursor=pointer]: 1 圈
+          - generic [ref=e54] [cursor=pointer]: 2 圈
+          - generic [ref=e55] [cursor=pointer]: 3 圈
+          - generic [ref=e56] [cursor=pointer]: 5 圈
+        - heading "对手水平" [level=3] [ref=e57]
+        - generic [ref=e58]:
+          - generic [ref=e59] [cursor=pointer]: 新手
+          - generic [ref=e60] [cursor=pointer]: 熟练
+          - generic [ref=e61] [cursor=pointer]: 车神
+        - heading "画质" [level=3] [ref=e62]
+        - generic [ref=e63]:
+          - generic [ref=e64] [cursor=pointer]: 流畅
+          - generic [ref=e65] [cursor=pointer]: 均衡
+          - generic [ref=e66] [cursor=pointer]: 极致
+      - generic [ref=e67]:
+        - heading "键位（还原端游默认）" [level=3] [ref=e68]
+        - generic [ref=e69]:
+          - generic [ref=e70]: ↑
+          - text: 加速
+          - generic [ref=e71]: ↓
+          - text: 刹车/倒车
+          - generic [ref=e72]: ←
+          - generic [ref=e73]: →
+          - text: 转向
+          - generic [ref=e74]: Shift
+          - text: +方向 漂移
+          - generic [ref=e75]: Ctrl
+          - text: 氮气/道具
+          - generic [ref=e76]: Alt
+          - text: 道具换位
+          - generic [ref=e77]: W
+          - text: 小喷
+          - generic [ref=e78]: R
+          - text: 复位
+          - generic [ref=e79]: C
+          - text: 切换视角
+          - generic [ref=e80]: M
+          - text: 音乐
+          - generic [ref=e81]: PgUp/PgDn
+          - text: 切歌
+          - generic [ref=e82]: Esc
+          - text: 暂停
+        - generic [ref=e83]: 技巧：漂移时集气条增长，集满获得 1 个氮气（最多 2 个）。松开 Shift 后车身回正的瞬间点一下 ↑ 触发小喷（越早越好，出现“完美”）； 小喷与氮气叠加即“双喷”。倒计时“GO”出现瞬间按 ↑ 可以起步加速；跳台落地瞬间点 ↑ 触发落地喷。蓝色箭头是加速带。
+    - button "开始比赛" [ref=e84] [cursor=pointer]
+    - generic [ref=e85]:
+      - link "GitHub 开源仓库" [ref=e86] [cursor=pointer]:
+        - /url: https://github.com/riba2534/claude-opus-5-5-demo
+      - link "关注作者 X" [ref=e89] [cursor=pointer]:
+        - /url: https://x.com/riba2534
+    - generic [ref=e92]: 非官方同人作品，致敬 QQ飞车。所有模型、贴图、音乐均为程序实时生成。

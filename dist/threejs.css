@@ -1,0 +1,64 @@
+/* Hallmark · pre-emit critique: P5 H5 E4 S5 R5 V5
+ * macrostructure: playable catalogue · tone: gallery-light · anchor hue: digital blue
+ * enrichment: Tier-A CSS game posters · contrast: pass · mobile: pass
+ */
+* { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { scroll-behavior: smooth; background: var(--color-paper); }
+body { margin: 0; min-width: 20rem; background: var(--color-paper); color: var(--color-ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 4px; }
+.play-header { position: fixed; z-index: 20; top: var(--space-sm); left: 50%; width: min(calc(100% - 2rem), 76rem); min-height: 3.5rem; transform: translateX(-50%); display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); padding: .65rem 1rem; border: 1px solid var(--color-rule); border-radius: var(--radius-pill); background: var(--color-glass); box-shadow: 0 .75rem 2.5rem var(--color-shadow); backdrop-filter: blur(1.2rem) saturate(180%); }
+.back { display: inline-flex; align-items: center; gap: var(--space-2xs); font-family: var(--font-editorial); font-size: 1.1rem; font-weight: 700; white-space: nowrap; }
+.back span { color: var(--color-accent); font-family: var(--font-body); }
+.edition { color: var(--color-muted); font-size: .62rem; font-weight: 700; letter-spacing: .16em; white-space: nowrap; }
+.play-hero { min-height: 92svh; max-width: 88rem; margin-inline: auto; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 8rem clamp(1.25rem, 6vw, 6rem) 9rem; position: relative; }
+.play-hero::after { content: ""; position: absolute; right: -8rem; top: 18%; width: min(48vw, 42rem); aspect-ratio: 1; border: 1px solid var(--color-rule); border-radius: 50%; box-shadow: inset 0 0 0 4rem var(--color-paper), inset 0 0 0 calc(4rem + 1px) var(--color-rule), inset 0 0 0 9rem var(--color-paper), inset 0 0 0 calc(9rem + 1px) var(--color-rule); opacity: .65; pointer-events: none; }
+.kicker { position: relative; z-index: 1; margin: 0 0 var(--space-lg); color: var(--color-accent); font-size: .78rem; font-weight: 650; letter-spacing: .08em; }
+.play-hero h1, .games-head h2 { min-width: 0; overflow-wrap: anywhere; font-family: var(--font-display); font-style: normal; }
+.play-hero h1 { position: relative; z-index: 1; max-width: 52rem; margin: 0; font-size: clamp(3rem, 5.4vw, 6.3rem); font-weight: 700; line-height: .98; letter-spacing: -.055em; }
+.play-hero h1 span { color: var(--color-accent); }
+.lede { position: relative; z-index: 1; width: min(40rem, 100%); min-width: 0; margin: var(--space-xl) 0 0; color: var(--color-muted); font-size: clamp(1rem, 1.8vw, 1.25rem); line-height: 1.75; overflow-wrap: anywhere; text-wrap: pretty; }
+.jump { position: absolute; z-index: 1; left: clamp(1.25rem, 6vw, 6rem); bottom: var(--space-xl); display: inline-flex; gap: var(--space-xs); color: var(--color-ink); font-size: .78rem; white-space: nowrap; }
+.jump span { color: var(--color-accent); }
+.games { padding: 7rem clamp(1rem, 4vw, 4rem) 9rem; background: var(--color-paper-2); }
+.games-head { max-width: 82rem; margin: 0 auto var(--space-2xl); display: flex; flex-direction: column; }
+.games-head p { margin: 0 0 var(--space-md); color: var(--color-accent); font-size: .68rem; font-weight: 700; letter-spacing: .16em; }
+.games-head h2 { max-width: 54rem; margin: 0; font-size: clamp(2.6rem, 5.8vw, 5.3rem); font-weight: 700; line-height: 1.04; letter-spacing: -.05em; }
+.game-grid { max-width: 82rem; margin-inline: auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-md); }
+.game-card { min-width: 0; overflow: hidden; display: grid; grid-template-rows: auto minmax(0, 1fr); border: 1px solid var(--color-rule); border-radius: var(--radius-lg); background: var(--color-paper-2); box-shadow: 0 1rem 3rem var(--color-shadow); transition: transform var(--dur-short) var(--ease-out), border-color var(--dur-short) linear; }
+.game-visual { position: relative; min-height: 18rem; overflow: hidden; isolation: isolate; }
+.game-shot { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(1.001); transition: transform .8s var(--ease-out); }
+.game-copy { display: flex; flex-direction: column; align-items: flex-start; padding: var(--space-lg); }
+.game-index { color: var(--color-muted); font-size: .64rem; font-weight: 700; letter-spacing: .12em; }
+.game-copy h3 { max-width: 16ch; margin: var(--space-md) 0 var(--space-sm); font-family: var(--font-editorial); font-size: clamp(2rem, 4vw, 3.3rem); font-style: normal; line-height: 1.05; letter-spacing: -.055em; overflow-wrap: anywhere; }
+.game-copy p { max-width: 35rem; margin: 0 0 var(--space-xl); color: var(--color-muted); font-size: .9rem; line-height: 1.7; }
+.launch { margin-top: auto; color: var(--color-accent); font-size: .82rem; font-weight: 650; white-space: nowrap; }
+.game-card--race .game-visual { background: linear-gradient(145deg, var(--color-blue), var(--color-paper)); }
+.track { position: absolute; left: 50%; top: 55%; width: 120%; height: 32%; border: 2px solid var(--color-rule); border-radius: 50%; transform: translate(-50%, -50%) rotate(-12deg); }
+.track-b { width: 76%; height: 16%; opacity: .6; }
+.racer { position: absolute; left: 48%; top: 49%; width: 5rem; height: 2rem; border-radius: 70% 25% 20% 25%; background: var(--color-accent); transform: rotate(-12deg); box-shadow: -5rem 1rem 4rem var(--color-accent); }
+.game-card--ship .game-visual { background: linear-gradient(160deg, var(--color-orange), var(--color-paper) 78%); }
+.container { position: absolute; bottom: 15%; width: 42%; height: 38%; border: 1px solid var(--color-rule); background: var(--color-paper-3); transform: skewY(-8deg); }
+.container-a { left: 8%; } .container-b { right: 6%; bottom: 24%; }
+.crosshair { position: absolute; left: 50%; top: 50%; width: 4rem; height: 4rem; border: 1px solid var(--color-ink); border-radius: 50%; transform: translate(-50%, -50%); }
+.crosshair::before, .crosshair::after { content: ""; position: absolute; left: 50%; top: 50%; background: var(--color-ink); transform: translate(-50%, -50%); }
+.crosshair::before { width: 6rem; height: 1px; } .crosshair::after { width: 1px; height: 6rem; }
+.game-card--pelican .game-visual { background: linear-gradient(180deg, var(--color-cyan), var(--color-orange)); }
+.sun { position: absolute; right: 12%; top: 12%; width: 6rem; aspect-ratio: 1; border-radius: 50%; background: var(--color-ink); opacity: .85; }
+.wheel { position: absolute; bottom: 12%; width: 6rem; aspect-ratio: 1; border: .55rem solid var(--color-paper); border-radius: 50%; } .wheel-a { left: 24%; } .wheel-b { right: 22%; }
+.bird { position: absolute; left: 44%; bottom: 32%; width: 4.5rem; height: 7rem; border-radius: 50% 70% 40% 20%; background: var(--color-ink); transform: rotate(-18deg); }
+.game-card--lol .game-visual { background: radial-gradient(circle at 50% 45%, var(--color-violet), var(--color-paper) 66%); }
+.bridge { position: absolute; left: -10%; right: -10%; top: 42%; height: 38%; border: 1px solid var(--color-rule); background: var(--color-paper-3); transform: perspective(24rem) rotateX(62deg) rotateZ(-4deg); }
+.crystal { position: absolute; top: 40%; width: 2.5rem; height: 5.5rem; background: var(--color-cyan); clip-path: polygon(50% 0, 100% 38%, 74% 100%, 22% 100%, 0 38%); } .crystal-a { left: 22%; } .crystal-b { right: 22%; background: var(--color-violet); }
+.crest { position: absolute; left: 50%; top: 48%; transform: translate(-50%, -50%); color: var(--color-ink); font-size: 5rem; }
+.play-note { min-height: 58svh; display: flex; flex-direction: column; justify-content: center; padding: 9vh clamp(1.25rem, 8vw, 9rem); background: var(--color-accent); color: var(--color-accent-ink); }
+.play-note p { max-width: 70rem; margin: 0; font-family: var(--font-display); font-size: clamp(2.3rem, 5.4vw, 5.4rem); font-weight: 700; line-height: 1.08; letter-spacing: -.055em; }
+.play-note p:first-child { opacity: .48; }
+footer { display: grid; gap: var(--space-md); padding: var(--space-2xl) clamp(1.25rem, 4vw, 4rem); color: var(--color-muted); font-size: .72rem; }
+footer a { color: var(--color-ink); font-family: var(--font-editorial); font-size: 1.35rem; font-weight: 700; }
+footer p { margin: 0; }
+@media (min-width: 46rem) { .game-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .game-card--race { grid-column: span 2; grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr); grid-template-rows: none; } .game-card--race .game-visual { min-height: 31rem; } footer { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) auto; align-items: end; } }
+@media (max-width: 35rem) { .edition { display: none; } .play-header { width: calc(100% - 1rem); top: .5rem; } .play-hero { padding-top: 7rem; } .play-hero::after { width: 26rem; right: -18rem; top: 12%; } .game-visual { min-height: 15rem; } .game-copy { padding: var(--space-md); } .play-note p { letter-spacing: -.055em; } }
+@media (hover: hover) and (pointer: fine) { .game-card:hover { transform: translateY(-4px); border-color: var(--color-accent); } .game-card:hover .game-shot { transform: scale(1.03); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }

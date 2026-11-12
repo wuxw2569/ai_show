@@ -1,0 +1,9 @@
+{
+  "scannedAt": "2026-11-12",
+  "framework": "vanilla-html",
+  "fontStack": "system-ui / PingFang SC / Microsoft YaHei",
+  "palette": "CSS custom properties",
+  "motion": "CSS-only",
+  "spacing": "fluid clamp values",
+  "sourceFiles": ["dist/index.html", "dist/styles.css", "dist/app.js"]
+}
