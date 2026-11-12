@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0b0a" />
+    <meta name="description" content="未见是一座只收藏让人停下、收藏并想分享的 AI 视觉作品展。" />
+    <meta property="og:title" content="未见 · AI作品展" />
+    <meta property="og:description" content="不是工具库。只收藏那些让人想发给朋友的作品。" />
+    <title>未见 · AI作品展</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="未见首页">
+        <span class="brand-mark">未见</span>
+        <span class="brand-latin">WEIJIAN</span>
+      </a>
+      <nav aria-label="主导航">
+        <a href="#today">今日一件</a>
+        <a href="#collection">馆藏</a>
+        <button class="nav-button" id="savedButton" type="button">收藏 <span id="savedCount">0</span></button>
+        <button class="nav-button nav-submit" id="submitButton" type="button">投一件</button>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="today" aria-labelledby="heroTitle">
+        <div class="hero-copy">
+          <p class="eyebrow">ISSUE 001 · 今日一件</p>
+          <h1 id="heroTitle">给世界<br />留一点<span>未见</span></h1>
+          <p class="hero-intro">不是工具库，也不解释它如何发生。<br />这里只收藏那些让人停下来，想发给朋友的作品。</p>
+          <div class="hero-actions">
+            <button class="button button-primary" type="button" data-open-art="endless-portals">进入今日展品</button>
+            <button class="button button-quiet" id="heroShare" type="button">分享这一刻 ↗</button>
+          </div>
+        </div>
+
+        <article class="hero-art" data-open-art="endless-portals" tabindex="0" role="button" aria-label="打开作品：无尽之门">
+          <div class="visual visual-portals visual-hero" aria-hidden="true">
+            <span class="portal portal-a"></span>
+            <span class="portal portal-b"></span>
+            <span class="portal portal-c"></span>
+            <span class="wanderer"></span>
+          </div>
+          <div class="hero-art-meta">
+            <div><span>01</span><strong>无尽之门</strong></div>
+            <p>如果一场梦，没有最后一个房间。</p>
+          </div>
+        </article>
+
+        <div class="scroll-cue" aria-hidden="true"><span></span>向下观展</div>
+      </section>
+
+      <section class="manifesto" aria-label="策展宣言">
+        <p>我们不追逐所有新东西。</p>
+        <p>我们只留下那些，<em>多年以后仍值得再看一眼</em>的瞬间。</p>
+      </section>
+
+      <section class="collection" id="collection" aria-labelledby="collectionTitle">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">THE COLLECTION · 试展</p>
+            <h2 id="collectionTitle">八件未见之物</h2>
+          </div>
+          <p class="collection-note">第一期以原创程序化视觉呈现策展体验。<br />真实展品上线时，将清晰标注作者与来源。</p>
+        </div>
+
+        <div class="mood-filter" role="group" aria-label="按情绪筛选">
+          <button class="filter is-active" data-filter="all" type="button">全部</button>
+          <button class="filter" data-filter="梦境" type="button">梦境</button>
+          <button class="filter" data-filter="壮观" type="button">壮观</button>
+          <button class="filter" data-filter="诡异" type="button">诡异</button>
+          <button class="filter" data-filter="治愈" type="button">治愈</button>
+        </div>
+
+        <div class="art-grid" id="artGrid"></div>
+      </section>
+
+      <section class="closing">
+        <p class="eyebrow">A HUMAN-CURATED AI EXHIBITION</p>
+        <blockquote>“如果它不值得单独发给一个朋友，<br />它就不该出现在这里。”</blockquote>
+        <button class="button button-invert" id="closingSubmit" type="button">把你见过的奇观投给我们</button>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand">未见 <span>WEIJIAN</span></div>
+      <p>一座由人类审美筛选的 AI 作品展。</p>
+      <p>© 2026 · 当前展品均为概念演示</p>
+    </footer>
+
+    <dialog class="art-dialog" id="artDialog" aria-labelledby="dialogTitle">
+      <button class="dialog-close" id="dialogClose" type="button" aria-label="关闭">×</button>
+      <div id="dialogVisual"></div>
+      <div class="dialog-body">
+        <div class="dialog-index" id="dialogIndex"></div>
+        <p class="eyebrow" id="dialogMood"></p>
+        <h2 id="dialogTitle"></h2>
+        <p class="dialog-line" id="dialogLine"></p>
+        <div class="dialog-credit">
+          <span>作品</span><strong id="dialogAuthor"></strong>
+          <span>状态</span><strong id="dialogStatus"></strong>
+        </div>
+        <div class="dialog-actions">
+          <button class="button button-primary" id="dialogSave" type="button">收藏此作</button>
+          <button class="button button-quiet" id="dialogShare" type="button">分享 ↗</button>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="submit-dialog" id="submitDialog" aria-labelledby="submitTitle">
+      <button class="dialog-close" id="submitClose" type="button" aria-label="关闭">×</button>
+      <div class="submit-inner">
+        <p class="eyebrow">SUBMIT A WONDER</p>
+        <h2 id="submitTitle">你见过什么<br />不能忘掉的东西？</h2>
+        <form id="submitForm">
+          <label>作品名称<input name="title" required placeholder="它叫什么？" /></label>
+          <label>原作链接<input name="url" type="url" required placeholder="https://" /></label>
+          <label>为什么值得被看见<textarea name="reason" rows="3" required placeholder="一句话就够了"></textarea></label>
+          <button class="button button-primary" type="submit">复制投稿信息</button>
+          <p class="form-note" id="submitNote">首版暂不收集个人信息。提交后会复制一份投稿文本，方便你发给站长。</p>
+        </form>
+      </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
